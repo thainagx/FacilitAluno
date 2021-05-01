@@ -2,14 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class Usuario extends Authenticatable
 {
     use HasFactory, Notifiable;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +22,7 @@ class Usuario extends Authenticatable
         'nome',
         'email',
         'password',
-        'password-confirm'
+        'flag_admin'
     ];
 
     /**
@@ -54,7 +56,7 @@ class Usuario extends Authenticatable
      */
     public function cursos()
     {
-        return $this->hasMany(Curso::class, 'id_usuario');
+        return $this->belongsToMany(Curso::class, 'usuarios_cursos', 'id_usuario', 'id_curso');
     }
 
     /**
@@ -62,7 +64,7 @@ class Usuario extends Authenticatable
      */
     public function disciplinas()
     {
-        return $this->hasMany(Disciplina::class, 'id_usuario');
+        return $this->belongsToMany(Disciplina::class, 'usuarios_disciplinas', 'id_usuario', 'id_disciplina');
     }
 
     /**
