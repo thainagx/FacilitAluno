@@ -1,6 +1,6 @@
 @extends('layouts.form')
 
-@section('titulo', (isset($usuario) ? "FacilitAluno | Editar" : " FacilitAluno | Cadastrar"))
+@section('titulo', "FacilitAluno | Cadastrar")
 
 @section('form')
         <form method="POST" action="{{ route('register') }}">
