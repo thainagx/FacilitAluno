@@ -9586,6 +9586,46 @@ button.bg-dark:focus {
   font-style: italic !important;
 }
 
+.text-primary-graf {
+  color: #3498ac !important;
+}
+
+a.text-primary-graf:hover, a.text-primary-graf:focus {
+  color: #225F6B !important;
+}
+
+.text-ej-graf {
+  color: #ff815c !important;
+}
+
+a.text-ej-graf:hover, a.text-ej-graf:focus {
+  color: #BC5D41 !important;
+}
+
+.text-ativiava-graf {
+  color:#ffe66b !important;
+}
+
+a.text-ativiava-graf:hover, a.text-ativiava-graf:focus {
+  color: #D6BB3B !important;
+}
+
+.text-estudo-graf {
+  color: #736f67 !important;
+}
+
+a.text-estudo-graf:hover, a.text-estudo-graf:focus {
+  color: #4C4942 !important;
+}
+
+.text-esporte-graf {
+  color: #fab964 !important;
+}
+
+a.text-esporte-graf:hover, a.text-esporte-graf:focus {
+  color: #BA8E54 !important;
+}
+
 .text-white {
   color: #fff !important;
 }
